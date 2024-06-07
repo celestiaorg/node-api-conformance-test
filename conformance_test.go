@@ -73,7 +73,7 @@ func compareStructs(t *testing.T, structA, structB interface{}, moduleName strin
 	typeB := reflect.TypeOf(structB)
 
 	if typeA.NumField() != typeB.NumField() {
-		t.Fatalf("%s API has a conflicting number of fields: %d != %d", moduleName, typeA.NumField(), typeB.NumField())
+		t.Errorf("%s API has a conflicting number of fields: %d != %d", moduleName, typeA.NumField(), typeB.NumField())
 	}
 
 	fieldsA := map[string]reflect.StructField{}
@@ -89,7 +89,7 @@ func compareStructs(t *testing.T, structA, structB interface{}, moduleName strin
 	for name, fieldA := range fieldsA {
 		fieldB, exists := fieldsB[name]
 		if !exists {
-			t.Errorf("Field %s exists in struct %s but not in struct %s", name, typeA.Name(), typeB.Name())
+			t.Errorf("Field %s exists in celestia-node but not in celestia-openrpc", name)
 			continue
 		}
 
