@@ -5,7 +5,7 @@ go 1.22.3
 toolchain go1.22.4
 
 require (
-	github.com/celestiaorg/celestia-node v0.14.0-rc1
+	github.com/celestiaorg/celestia-node v0.15.0-beta.1
 	github.com/celestiaorg/celestia-openrpc v0.4.0
 )
 
@@ -58,6 +58,7 @@ require (
 	github.com/cosmos/btcutil v1.0.5 // indirect
 	github.com/cosmos/cosmos-proto v1.0.0-alpha8 // indirect
 	github.com/cosmos/cosmos-sdk v0.46.16 // indirect
+	github.com/cosmos/cosmos-sdk/api v0.1.0 // indirect
 	github.com/cosmos/go-bip39 v1.0.0 // indirect
 	github.com/cosmos/gogoproto v1.4.11 // indirect
 	github.com/cosmos/gorocksdb v1.2.0 // indirect
